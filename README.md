@@ -5,6 +5,7 @@ A new Flutter project.
 Creators:
 - Justin Medeiros | 200744390
 - Yash-Rojiwadia | 203039360
+- Andre Grandon | 190831360
 
 ## Getting Started
 
