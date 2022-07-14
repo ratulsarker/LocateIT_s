@@ -2,12 +2,9 @@
 
 A new Flutter project.
 
-<<<<<<< HEAD
-=======
 Creators:
 - Justin Medeiros | 200744390
 - Yash-Rojiwadia | 203039360
->>>>>>> 2e9b0ca372c249f49589afb92dd27ccf043d71ea
 
 ## Getting Started
 
