@@ -6,6 +6,10 @@ Creators:
 - Justin Medeiros | 200744390
 - Yash-Rojiwadia | 203039360
 
+- Andre Grandon | 190831360
+- Ratul Sarker | 203087260
+- Jay vora | 203321900
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
