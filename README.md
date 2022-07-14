@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+Creators:
+- Justin Medeiros | 200744390
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
