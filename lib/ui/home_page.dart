@@ -24,15 +24,23 @@ class Body extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => _Body();
-
- 
 }
 
 class _Body extends State<Body> {
-   @override
+  @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Stack(children: <Widget>[
+        // Profile Icon
+        IconButton(
+          padding: const EdgeInsets.only(left: 355, top: 48),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => ProfilePage())));
+          },
+          icon: const Icon(Icons.person),
+          color: Colors.white,
+        ),
         // Search bar -> UNFINISHED
         Container(
           width: 350,
@@ -54,25 +62,14 @@ class _Body extends State<Body> {
         ),
         // Text
         Container(
-            padding: EdgeInsets.fromLTRB(25, 95, 0, 0),
-            child: Text(
+            padding: const EdgeInsets.fromLTRB(25, 95, 0, 0),
+            child: const Text(
               "Recommended Locations",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
             )),
-        // Profile Icon
-        IconButton(
-          padding: EdgeInsets.fromLTRB(355, 45, 0, 0),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())));
-          },
-          icon: Icon(Icons.person),
-          color: Colors.white,
-        ),
-        Container(width: 200, child: Column(children: []))
       ]),
     );
   }
