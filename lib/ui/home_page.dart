@@ -32,14 +32,17 @@ class _Body extends State<Body> {
     return SingleChildScrollView(
       child: Stack(children: <Widget>[
         // Profile Icon
-        IconButton(
-          padding: const EdgeInsets.only(left: 355, top: 48),
+        Container(
+          padding: const EdgeInsets.only(left: 342, top: 36),
+          child:  IconButton(
+          iconSize: 30,
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: ((context) => ProfilePage())));
           },
           icon: const Icon(Icons.person),
           color: Colors.white,
+          ),
         ),
         // Search bar -> UNFINISHED
         Container(
