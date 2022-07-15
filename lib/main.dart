@@ -69,14 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
               label: 'Notes')
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromRGBO(0, 156, 255, 1),
+        selectedItemColor: const Color.fromARGB(255, 1, 16, 19),
         onTap: _onItemTapped,
       ),
     );
   }
 }
-
-/*
-step 1 : create main layout 
-
-*/
