@@ -1,31 +1,32 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'ui/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LocateIt());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class LocateIt extends StatelessWidget {
+  const LocateIt({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: MyStatefulWidget(),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -41,6 +42,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     ),
     Text(
       'Index 2: School',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Profile',
       style: optionStyle,
     ),
   ];
@@ -60,22 +65,31 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Color.fromARGB(255, 17, 137, 173)),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Favourites',
-          ),
+              icon: Icon(Icons.star),
+              label: 'Favourites',
+              backgroundColor: Color.fromARGB(255, 17, 173, 165)),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notes),
-            label: 'Notes',
-          ),
+              icon: Icon(Icons.notes),
+              label: 'Notes',
+              backgroundColor: Color.fromARGB(255, 17, 173, 165)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+              backgroundColor: Color.fromARGB(255, 17, 173, 160)),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 255, 0, 128),
+        selectedItemColor: Color.fromARGB(255, 1, 16, 19),
         onTap: _onItemTapped,
       ),
     );
   }
 }
+
+/*
+step 1 : create main layout 
+
+*/
