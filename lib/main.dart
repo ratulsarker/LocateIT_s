@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: Color.fromARGB(255, 17, 173, 160)),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 1, 16, 19),
+        selectedItemColor: const Color.fromARGB(255, 1, 16, 19),
         onTap: _onItemTapped,
       ),
     );
@@ -93,3 +93,22 @@ class _MyHomePageState extends State<MyHomePage> {
 step 1 : create main layout 
 
 */
+class MyLoginPage extends StatefulWidget {
+  const MyLoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<MyLoginPage> createState() => _MyLoginPageState();
+}
+
+class _MyLoginPageState extends State<MyLoginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const []),
+    );
+  }
+}
