@@ -66,23 +66,16 @@ class _MyHomePageState extends State<MyHomePage> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Color.fromARGB(255, 17, 137, 173)),
+              label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.star),
-              label: 'Favourites',
-              backgroundColor: Color.fromARGB(255, 17, 173, 165)),
+              label: 'Favourites'),
           BottomNavigationBarItem(
               icon: Icon(Icons.notes),
-              label: 'Notes',
-              backgroundColor: Color.fromARGB(255, 17, 173, 165)),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-              backgroundColor: Color.fromARGB(255, 17, 173, 160)),
+              label: 'Notes')
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromARGB(255, 1, 16, 19),
+        selectedItemColor: Color.fromRGBO(0, 156, 255, 1),
         onTap: _onItemTapped,
       ),
     );
