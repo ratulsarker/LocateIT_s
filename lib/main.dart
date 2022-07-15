@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: unused_import
 import 'ui/home_page.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class LocateIt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Demo',
+      title: 'LocateIT',
       home: MyHomePage(),
     );
   }
@@ -32,9 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
+    MaterialApp(
+      home: HomePage()
     ),
     Text(
       'Index 1: Business',
@@ -42,10 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
     Text(
       'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Profile',
       style: optionStyle,
     ),
   ];
