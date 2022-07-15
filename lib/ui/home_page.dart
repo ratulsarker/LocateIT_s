@@ -2,9 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:locate_it/ui/profile_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<StatefulWidget> createState() => _HomePage();
+}
+
+class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,12 +19,17 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   Body({Key? key}) : super(key: key);
 
-  String location = "";
-
   @override
+  State<StatefulWidget> createState() => _Body();
+
+ 
+}
+
+class _Body extends State<Body> {
+   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Stack(children: <Widget>[
@@ -39,7 +49,8 @@ class Body extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
               cursorColor: Colors.white,
-              onSubmitted: (value) => print('Submitted $value')), // Need to do this page route
+              onSubmitted: (value) =>
+                  print('Submitted $value')), // Need to do this page route
         ),
         // Text
         Container(
@@ -60,7 +71,8 @@ class Body extends StatelessWidget {
           },
           icon: Icon(Icons.person),
           color: Colors.white,
-        )
+        ),
+        Container(width: 200, child: Column(children: []))
       ]),
     );
   }
