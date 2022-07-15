@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       home: MyStatefulWidget(),
     );
@@ -73,10 +73,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color.fromRGBO(0, 156, 255, 1),
+        selectedItemColor: Color.fromARGB(255, 255, 0, 128),
         onTap: _onItemTapped,
       ),
     );
   }
 }
-
