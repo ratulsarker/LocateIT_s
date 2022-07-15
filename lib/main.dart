@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 // ignore: unused_import
 import 'ui/home_page.dart';
 
@@ -14,7 +15,8 @@ class LocateIt extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      home: LoginPage(),
     );
   }
 }
@@ -85,30 +87,6 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: const Color.fromARGB(255, 1, 16, 19),
         onTap: _onItemTapped,
       ),
-    );
-  }
-}
-
-/*
-step 1 : create main layout 
-
-*/
-class MyLoginPage extends StatefulWidget {
-  const MyLoginPage({Key? key}) : super(key: key);
-
-  @override
-  State<MyLoginPage> createState() => _MyLoginPageState();
-}
-
-class _MyLoginPageState extends State<MyLoginPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const []),
     );
   }
 }
