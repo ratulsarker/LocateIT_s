@@ -15,8 +15,11 @@ class LocateIt extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Flutter Demo',
-      // home: MyHomePage(),
-      home: LoginPage(),
+      home: MyHomePage(),
+      //i did this to test my login page
+      // comment the line below and uncomment the home page line to run code
+
+      //home: LoginPage(),
     );
   }
 }
@@ -66,22 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.star),
-              label: 'Favourites'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notes),
-              label: 'Notes')
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favourites'),
+          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes')
         ],
         currentIndex: _selectedIndex,
-<<<<<<< HEAD
-        selectedItemColor: const Color.fromARGB(255, 1, 16, 19),
-=======
-        selectedItemColor: Color.fromRGBO(0, 156, 255, 1),
->>>>>>> 3f3170cefd42baf08de87ce2bfd1381454a1cb3d
+        selectedItemColor: const Color.fromRGBO(0, 156, 255, 1),
         onTap: _onItemTapped,
       ),
     );
