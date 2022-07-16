@@ -13,7 +13,7 @@ class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(0, 156, 255, 1),
+        backgroundColor: const Color.fromRGBO(0, 156, 255, 1),
         // add body
         body: Body());
   }
@@ -34,14 +34,14 @@ class _Body extends State<Body> {
         // Profile Icon
         Container(
           padding: const EdgeInsets.only(left: 342, top: 36),
-          child:  IconButton(
-          iconSize: 30,
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: ((context) => ProfilePage())));
-          },
-          icon: const Icon(Icons.person),
-          color: Colors.white,
+          child: IconButton(
+            iconSize: 30,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: ((context) => ProfilePage())));
+            },
+            icon: const Icon(Icons.person),
+            color: Colors.white,
           ),
         ),
         // Search bar -> UNFINISHED

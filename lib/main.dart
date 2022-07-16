@@ -7,9 +7,14 @@ void main() {
   runApp(const LocateIt());
 }
 
-class LocateIt extends StatelessWidget {
+class LocateIt extends StatefulWidget {
   const LocateIt({Key? key}) : super(key: key);
 
+  @override
+  State<LocateIt> createState() => _LocateItState();
+}
+
+class _LocateItState extends State<LocateIt> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -64,14 +69,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.cyanAccent,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Color.fromARGB(255, 182, 145, 133)),
           BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favourites'),
-          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes')
+          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: const Color.fromRGBO(0, 156, 255, 1),
