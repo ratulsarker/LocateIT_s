@@ -19,7 +19,7 @@ class _LocateItState extends State<LocateIt> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Demo',
+      title: 'LocateIT',
       home: MyHomePage(),
       //i did this to test my login page
       // comment the line below and uncomment the home page line to run code
@@ -43,19 +43,19 @@ class _MyHomePageState extends State<MyHomePage> {
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
     Text(
-      'Index 0: Home',
+      'Insert Home search bar etc',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Favourites',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Notes',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Profile',
+      'Profile',
       style: optionStyle,
     ),
   ];
