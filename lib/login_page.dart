@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 const SizedBox(height: 20),
-                //email text
+                //email textbox for entering the email of user here-----------------------
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                //password text
+                //password textbox for user to enter their password -------------------
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                //sign in button
+                //sign in button -----------------------------------------------------------
 
                 //not a memeber? register now
               ],
