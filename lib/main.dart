@@ -61,6 +61,16 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   void _onItemTapped(int index) {
+    if (index == 3) {
+      Navigator.push(context,
+          MaterialPageRoute(builder: ((context) => const LoginPage())));
+    } else if (index == 0) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePage(),
+          ));
+    }
     setState(() {
       _selectedIndex = index;
     });
@@ -82,7 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundColor: Color.fromARGB(255, 182, 145, 133)),
           BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favourites'),
           BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+            backgroundColor: Colors.blueGrey,
+          )
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: const Color.fromRGBO(0, 156, 255, 1),

@@ -66,13 +66,14 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: const TextField(
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: 'password',
-                    ),
+                        border: InputBorder.none,
+                        hintText: 'password',
+                        prefixIcon: Icon(Icons.security_outlined)),
                   ),
                 ),
               ),
               //sign in button
+
               //not a memeber? register now
             ],
           ),
