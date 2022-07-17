@@ -1,4 +1,4 @@
-# locate_it
+# LocateIT
 
 A new Flutter project.
 
