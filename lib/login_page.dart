@@ -23,21 +23,21 @@ class _LoginPageState extends State<LoginPage> {
           child: Center(
             child: Column(
               children: [
-                const SizedBox(height: 185),
+                const SizedBox(height: 200),
                 // Text
                 const Text(
-                  'LocateIT Login',
+                  'LocateIT',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 25,
+                    fontSize: 35,
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 20),
 
                 const Text(
                   'Welcome back, you\'ve been missed!',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                   ),
                 ),
 
@@ -80,9 +80,37 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 20),
                 //sign in button -----------------------------------------------------------
-
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: RawMaterialButton(
+                      fillColor: Colors.cyan,
+                      elevation: 4.0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      onPressed: () {},
+                      child: const Text(
+                        "Login",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 //not a memeber? register now
+                const SizedBox(height: 25.0),
+                const Text(
+                  'Not a member? register now',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
               ],
             ),
           ),
