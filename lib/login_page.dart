@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
           gradient: LinearGradient(
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
-        colors: [Colors.purple, Colors.blue],
+        colors: [Colors.cyanAccent, Colors.blueAccent],
       )),
       child: Scaffold(
         backgroundColor: Colors.transparent,

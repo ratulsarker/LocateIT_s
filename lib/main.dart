@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
+
 // ignore: unused_import
 import 'ui/home_page.dart';
 
-void main() {
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase
   runApp(const LocateIt());
 }
 
