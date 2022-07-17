@@ -37,6 +37,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // Future<FirebaseApp> _initializeFirebase() async {
+  //   FirebaseApp firebaseApp = await Firebase.initializeApp();
+  //   return firebaseApp;
+  // }
+
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -79,10 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
+      // c
+      // body: Futurebuilder(
+      //     future: _initializedFirebase(),
+      //     builder: (context, snapshot) {
+      //       if (snapshot.connectionState == ConnectionState.done) {
+      //         return const LoginPage();
+      //       }
+      //       return const Center(
+      //         child: CircularProgressIndicator(),
+
+      //       ),
+      //     }),
+
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.cyanAccent,
         items: const <BottomNavigationBarItem>[
