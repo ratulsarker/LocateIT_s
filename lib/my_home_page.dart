@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:locate_it/home_page/home_page.dart';
+import 'package:locate_it/profile_page/profile_page.dart';
 import 'login_page.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -21,7 +22,8 @@ class _MyHomePageState extends State<MyHomePage> {
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
     MaterialApp(
-      home: HomePage()
+      home: ProfilePage()
+      //home: HomePage()
     ),
     Text(
       'Favourites',
