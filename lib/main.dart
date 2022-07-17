@@ -7,7 +7,7 @@ import 'ui/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   runApp(const LocateIt());
 }
 
@@ -51,9 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
-    Text(
-      'Insert Home search bar etc',
-      style: optionStyle,
+    MaterialApp(
+      home: HomePage()
     ),
     Text(
       'Favourites',
@@ -73,13 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (index == 3) {
       Navigator.push(context,
           MaterialPageRoute(builder: ((context) => const LoginPage())));
-    } else if (index == 0) {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomePage(),
-          ));
-    }
+    } // Removed else statement because bottom tabs should show up when on home page
     setState(() {
       _selectedIndex = index;
     });
@@ -111,8 +104,14 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.home),
               label: 'Home',
               backgroundColor: Color.fromARGB(255, 72, 67, 145)),
-          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favourites'),
-          BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star), 
+            label: 'Favourites',
+            backgroundColor: Color.fromARGB(255, 72, 67, 145)),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notes), 
+            label: 'Notes', 
+            backgroundColor: Color.fromARGB(255, 72, 67, 145)),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',

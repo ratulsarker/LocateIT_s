@@ -12,10 +12,17 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color.fromRGBO(0, 156, 255, 1),
-        // add body
-        body: Body());
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+        colors: [Colors.cyanAccent, Colors.blueAccent],
+        )),
+      child: Scaffold(
+          backgroundColor: Colors.transparent,
+          // add body
+          body: Body()));
   }
 }
 
@@ -55,6 +62,12 @@ class _Body extends State<Body> {
               placeholderStyle: TextStyle(color: Colors.white),
               style: TextStyle(color: Colors.white, fontSize: 14),
               decoration: BoxDecoration(
+                boxShadow: [BoxShadow(
+                  color: Colors.grey.withOpacity(0.5), 
+                  offset: Offset(0, 5),
+                  blurRadius: 7,
+                  spreadRadius: 3
+              )],
                 color: Color.fromRGBO(0, 0, 0, 0.1),
                 border: Border.all(color: Colors.white, width: 3),
                 borderRadius: BorderRadius.circular(20),
