@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 // ignore: unused_import
 import 'ui/home_page.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const LocateIt());
 }
 
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
-              backgroundColor: Color.fromARGB(255, 182, 145, 133)),
+              backgroundColor: Color.fromARGB(255, 72, 67, 145)),
           BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favourites'),
           BottomNavigationBarItem(icon: Icon(Icons.notes), label: 'Notes'),
           BottomNavigationBarItem(
