@@ -6,8 +6,8 @@ import 'my_home_page.dart';
 import 'ui/home_page.dart';
 
 void main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
   runApp(const LocateIt());
 }
 
