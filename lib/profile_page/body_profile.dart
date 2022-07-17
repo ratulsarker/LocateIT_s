@@ -102,8 +102,7 @@ class _Body extends State<Body> {
               borderRadius: BorderRadius.circular(20),
             ),
             cursorColor: Colors.white,
-            onSubmitted: (value) =>
-                print('Submitted $value')), // Need to do this page route
+            onSubmitted: (value) => name = value) // Need to do this page route
       );
     }
   }
