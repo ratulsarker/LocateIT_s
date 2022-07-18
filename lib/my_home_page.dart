@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:locate_it/home_page/home_page.dart';
+// import 'package:locate_it/home_page/home_page.dart';
 import 'package:locate_it/profile_page/profile_page.dart';
 import 'login_page.dart';
+import 'favourites_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -21,10 +22,9 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
-    MaterialApp(
-      home: ProfilePage()
-      //home: HomePage()
-    ),
+    MaterialApp(home: ProfilePage()
+        //home: HomePage()
+        ),
     Text(
       'Favourites',
       style: optionStyle,
@@ -43,7 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
     if (index == 3) {
       Navigator.push(context,
           MaterialPageRoute(builder: ((context) => const LoginPage())));
-    } 
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: ((context) => const MyFavPage())),
+      );
+    }
     setState(() {
       _selectedIndex = index;
     });
@@ -62,14 +67,14 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.home),
               label: 'Home',
               backgroundColor: Color.fromARGB(255, 72, 67, 145)),
-           BottomNavigationBarItem(
-            icon: Icon(Icons.star), 
-            label: 'Favourites',
-            backgroundColor: Color.fromARGB(255, 72, 67, 145)),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notes), 
-            label: 'Notes', 
-            backgroundColor: Color.fromARGB(255, 72, 67, 145)),
+              icon: Icon(Icons.star),
+              label: 'Favourites',
+              backgroundColor: Color.fromARGB(255, 72, 67, 145)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notes),
+              label: 'Notes',
+              backgroundColor: Color.fromARGB(255, 72, 67, 145)),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
