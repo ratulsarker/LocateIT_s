@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../profile_page/profile_page.dart';
 
 class Body extends StatefulWidget {
-  Body({Key? key}) : super(key: key);
+  const Body({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _Body();
