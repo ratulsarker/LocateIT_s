@@ -20,8 +20,10 @@ class _Body extends State<Body> {
           child: IconButton(
             iconSize: 30,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: ((context) => const ProfilePage())));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: ((context) => const ProfilePage())));
             },
             icon: const Icon(Icons.person),
             color: Colors.white,
@@ -38,12 +40,13 @@ class _Body extends State<Body> {
               placeholderStyle: const TextStyle(color: Colors.white),
               style: const TextStyle(color: Colors.white, fontSize: 14),
               decoration: BoxDecoration(
-                boxShadow: [BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), 
-                  offset: const Offset(0, 5),
-                  blurRadius: 7,
-                  spreadRadius: 3
-              )],
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      offset: const Offset(0, 5),
+                      blurRadius: 7,
+                      spreadRadius: 3)
+                ],
                 color: const Color.fromRGBO(0, 0, 0, 0.1),
                 border: Border.all(color: Colors.white, width: 3),
                 borderRadius: BorderRadius.circular(20),
@@ -53,7 +56,7 @@ class _Body extends State<Body> {
                   print('Submitted $value')), // Need to do this page route
         ),
         // Text
-          // Need to put shadow behind text
+        // Need to put shadow behind text
         Container(
             padding: const EdgeInsets.fromLTRB(25, 95, 0, 0),
             child: const Text(
