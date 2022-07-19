@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:locate_it/home_page/home_page.dart';
-import 'package:locate_it/profile_page/profile_page.dart';
+import 'package:locate_it/ui/profile_page/profile_page.dart';
 import 'login_page.dart';
 import 'favourites_page.dart';
 

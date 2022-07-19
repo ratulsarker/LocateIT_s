@@ -3,7 +3,7 @@ import 'my_home_page.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
 // ignore: unused_import
-import 'home_page/home_page.dart';
+import 'ui/home_page/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
