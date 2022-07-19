@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:locate_it/home_page/home_page.dart';
+import 'package:locate_it/ui/home_page/home_page.dart';
 import 'package:locate_it/ui/profile_page/profile_page.dart';
 import 'login_page.dart';
 import 'favourites_page.dart';
@@ -22,9 +22,9 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     // All of these will change with containers
-    MaterialApp(home: ProfilePage()
-        //home: HomePage()
-        ),
+    MaterialApp(
+        //home: ProfilePage()
+        home: HomePage()),
     Text(
       'Favourites',
       style: optionStyle,

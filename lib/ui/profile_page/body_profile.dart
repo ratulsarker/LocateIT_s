@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:locate_it/login_page.dart';
+import 'package:locate_it/ui/home_page/home_page.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -16,9 +18,43 @@ class _Body extends State<Body> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        // Sign out button
+        Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.only(top: 650),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => const LoginPage()),
+                    ));
+              },
+              child: const Text(
+                'Sign Out',
+                style: TextStyle(color: Colors.white),
+              ),
+            )),
+        // Back button
+        Container(
+            alignment: Alignment.topLeft,
+            padding: const EdgeInsets.only(top: 5, left: 5),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => const HomePage()),
+                    ));
+              },
+              icon: const Icon(Icons.arrow_back_rounded),
+              iconSize: 40,
+              color: Colors.white,
+            )),
+        // Confirm Changes
         Container(
           alignment: Alignment.center,
-          padding: const EdgeInsets.only(top: 600),
+          padding: const EdgeInsets.only(top: 510),
           child: ElevatedButton(
               style: ButtonStyle(
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -31,29 +67,29 @@ class _Body extends State<Body> {
                 style: TextStyle(fontSize: 18, color: Colors.white),
               )),
         ),
-        SearchBar(350, name, 1), // Name field
+        SearchBar(310, name, 1), // Name field
         // Username Text
         Container(
             alignment: Alignment.topCenter,
-            padding: const EdgeInsets.only(top: 440, right: 260),
+            padding: const EdgeInsets.only(top: 400, right: 260),
             child: const Text(
               "Username",
               style: TextStyle(color: Colors.white, fontSize: 20),
             )),
-        SearchBar(480, username, 0), // Username field
+        SearchBar(440, username, 0), // Username field
         // Email Text
         Container(
             alignment: Alignment.topCenter,
-            padding: const EdgeInsets.only(top: 550, right: 295),
+            padding: const EdgeInsets.only(top: 510, right: 295),
             child: const Text(
               "Email",
               style: TextStyle(color: Colors.white, fontSize: 20),
             )),
-        SearchBar(590, email, 0), // Password field
+        SearchBar(550, email, 0), // Password field
         // Profile Icon
         Container(
           alignment: Alignment.topCenter,
-          padding: const EdgeInsets.only(top: 140),
+          padding: const EdgeInsets.only(top: 100),
           child: IconButton(
             // Button for now until can get pictures figured out
             iconSize: 200,
