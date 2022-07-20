@@ -4,6 +4,7 @@ class AppAssets {
 
   // DATA
   static const testimage = "assets/images/picture.jpg";
+  static const background = "assets/images/background.png";
   // static const skydiving = "assets/images/skydiving.jpeg";
   // static const trekking = "assets/images/trekking.jpg";
   // static const hiking = "assets/images/hiking.jpg";

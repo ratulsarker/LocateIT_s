@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../profile_page/profile_page.dart';
 
-class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+class BodyHome extends StatefulWidget {
+  const BodyHome({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _Body();
+  State<StatefulWidget> createState() => _BodyHome();
 }
 
-class _Body extends State<Body> {
+class _BodyHome extends State<BodyHome> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:locate_it/ui/home_page/home_page.dart';
 import 'package:locate_it/ui/profile_page/profile_page.dart';
-import 'login_page.dart';
+import 'ui/login_page/login_page.dart';
 import 'favourites_page.dart';
 
 class MyHomePage extends StatefulWidget {

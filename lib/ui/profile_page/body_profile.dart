@@ -1,16 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:locate_it/login_page.dart';
+import 'package:locate_it/ui/login_page/login_page.dart';
 import 'package:locate_it/ui/home_page/home_page.dart';
 
-class Body extends StatefulWidget {
-  const Body({Key? key}) : super(key: key);
+class BodyProfile extends StatefulWidget {
+  const BodyProfile({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _Body();
+  State<StatefulWidget> createState() => _BodyProfile();
 }
 
-class _Body extends State<Body> {
+class _BodyProfile extends State<BodyProfile> {
   String name = "Justin Medeiros";
   String username = "jmedeiros11";
   String email = "mede4390@mylaurier.ca";
