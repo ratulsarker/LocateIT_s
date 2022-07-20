@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:locate_it/api_test.dart';
 import 'package:locate_it/ui/home_page/home_page.dart';
 import 'package:locate_it/ui/profile_page/profile_page.dart';
 import 'ui/login_page/login_page.dart';
@@ -25,9 +26,8 @@ class _MyHomePageState extends State<MyHomePage> {
     MaterialApp(
         //home: ProfilePage()
         home: HomePage()),
-    Text(
-      'Favourites',
-      style: optionStyle,
+    MaterialApp(
+      home: API()
     ),
     Text(
       'Notes',
