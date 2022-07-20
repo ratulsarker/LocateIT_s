@@ -20,7 +20,7 @@ class _API extends State<API> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    String apiKey = 'AIzaSyB8v_6Y7Nwj3nt8COVoIIcMTZWvBqd-rY8';
+    String apiKey = 'KEY';
     googlePlace = GooglePlace(apiKey);
   }
 
