@@ -1,11 +1,19 @@
 class Search {
+  String result = "";
+  List<String> destinations = [
+    'Toronto',
+    'Vancouver',
+    'Montreal',
+    'Edmonton',
+    'Ottawa'
+  ];
 
-  String location = "";
-
-  // Constructor
-  Search(String location) {
-    this.location = location;
+  void setLocation() {
+    this.result = result;
   }
 
-  
+  // Will get the various locations from
+  String locations() {
+    return result;
+  }
 }

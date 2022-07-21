@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:locate_it/app/search.dart';
 import '../profile_page/profile_page.dart';
 
 class BodyHome extends StatefulWidget {
@@ -10,63 +11,84 @@ class BodyHome extends StatefulWidget {
 }
 
 class _BodyHome extends State<BodyHome> {
+  Search searchLocation = Search();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Stack(children: <Widget>[
-        // Profile Icon
-        Container(
-          padding: const EdgeInsets.only(left: 342, top: 36),
-          child: IconButton(
-            iconSize: 30,
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: ((context) => const ProfilePage())));
-            },
-            icon: const Icon(Icons.person),
-            color: Colors.white,
-          ),
+    return Stack(children: <Widget>[
+      // Profile Icon
+      Container(
+        padding: const EdgeInsets.only(left: 360, top: 40),
+        child: IconButton(
+          iconSize: 40,
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => const ProfilePage())));
+          },
+          icon: const Icon(Icons.person),
+          color: Colors.white,
         ),
-        // Search bar -> UNFINISHED
-        Container(
-          width: 350,
-          padding: const EdgeInsets.fromLTRB(20, 40, 30, 0),
-          alignment: Alignment.topLeft,
-          child: CupertinoTextField(
-              padding: const EdgeInsets.all(8),
-              placeholder: 'Search',
-              placeholderStyle: const TextStyle(color: Colors.white),
-              style: const TextStyle(color: Colors.white, fontSize: 14),
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      offset: const Offset(0, 5),
-                      blurRadius: 7,
-                      spreadRadius: 3)
-                ],
-                color: const Color.fromRGBO(0, 0, 0, 0.1),
-                border: Border.all(color: Colors.white, width: 3),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              cursorColor: Colors.white,
-              onSubmitted: (value) =>
-                  print('Submitted $value')), // Need to do this page route
-        ),
-        // Text
-        // Need to put shadow behind text
-        Container(
-            padding: const EdgeInsets.fromLTRB(25, 95, 0, 0),
-            child: const Text(
-              "Recommended Locations",
-              style: TextStyle(
+      ),
+      // Search bar -> UNFINISHED
+      Container(
+        width: 350,
+        padding: const EdgeInsets.fromLTRB(20, 40, 30, 0),
+        alignment: Alignment.topLeft,
+        child: Column(
+          children: [
+            Autocomplete(optionsBuilder: (TextEditingValue textEditingValue) {
+              if (textEditingValue.text.isEmpty) {
+                return const Iterable<String>.empty();
+              } else {
+                return searchLocation.destinations.where((word) => word
+                    .toLowerCase()
+                    .contains(textEditingValue.text.toLowerCase()));
+              }
+            }, fieldViewBuilder:
+                (context, textEditingController, focusNode, onFieldSubmitted) {
+              return TextField(
+                controller: textEditingController,
+                focusNode: focusNode,
+                onEditingComplete: onFieldSubmitted,
+                cursorColor: Colors.white,
+                style: const TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                prefixIcon: const Icon(
+                  Icons.search,
                   color: Colors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold),
-            )),
-      ]),
-    );
+                ),
+                prefixIconColor: Colors.white,
+                hintText: "Search",
+                hintStyle: const TextStyle(color: Colors.white),
+                focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: Colors.white, width: 4.0),
+                    borderRadius: BorderRadius.circular(20)),
+                enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        const BorderSide(color: Colors.white, width: 4.0),
+                    borderRadius: BorderRadius.circular(20)),
+              ),
+              );
+            }),
+          ],
+        ),
+        // Need to do this page route
+      ),
+      // Text
+      Container(
+          padding: const EdgeInsets.fromLTRB(25, 115, 0, 0),
+          child: const Text(
+            "Recommended Locations",
+            style: TextStyle(
+                color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
+          )),
+    ]);
   }
 }
