@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_place: ^0.4.7
   flutter_dotenv: ^5.0.2
+  http: ^0.13.4
 
 # Firebase auth and firebase core
 
