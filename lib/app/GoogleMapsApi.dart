@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
 class GoogleMapsAPI {
-  final String keyAPI = 'AIzaSyAuJN2ZXIcSRIlFJCDz9cIy0pWoh9086s0';
+  final String keyAPI = dotenv.get('GOOGLE_PLACES_API_KEY');
 
   Future getPlaceID(String input) async {
     final String url =
