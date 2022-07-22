@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:locate_it/ui/home_page/home_page.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -86,7 +86,9 @@ class _BodyLogin extends State<BodyLogin> {
                     elevation: 4.0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
-                    onPressed: () {},
+                    onPressed: () {
+                      //after clicking on login button take to homepage
+                    },
                     child: const Text(
                       "Login",
                       style: TextStyle(
@@ -99,14 +101,22 @@ class _BodyLogin extends State<BodyLogin> {
               ),
               //not a memeber? register now
               const SizedBox(height: 25.0),
-              const Text(
-                'Not a member? register now',
-                style: TextStyle(
-                  fontSize: 16,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: ((context) => const HomePage())),
+                  );
+                },
+                child: const Text(
+                  'Not a member? register now',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
               ),
 
-              // const Image(image: AssetImage('assets/images/Toronto.png')),
+              //
             ],
           ),
         ),
