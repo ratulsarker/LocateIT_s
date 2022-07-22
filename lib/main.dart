@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'my_home_page.dart';
 // import 'package:firebase_core/firebase_core.dart';
 
@@ -7,7 +7,7 @@ import 'my_home_page.dart';
 import 'ui/home_page/home_page.dart';
 
 Future main() async {
-  await dotenv.load(fileName: '.env');
+  // await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp();
   runApp(const LocateIt());
