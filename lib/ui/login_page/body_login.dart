@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:locate_it/ui/login_page/body_signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import '../../authentication_service.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -10,6 +13,10 @@ class BodyLogin extends StatefulWidget {
 }
 
 class _BodyLogin extends State<BodyLogin> {
+  // creating controllers for email and password
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +25,7 @@ class _BodyLogin extends State<BodyLogin> {
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 200),
+              const SizedBox(height: 100),
               // Text
               Text(
                 'LocateIT',
@@ -48,8 +55,9 @@ class _BodyLogin extends State<BodyLogin> {
                         color: const Color.fromARGB(255, 104, 97, 97)),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: emailController,
+                    decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Email',
                       prefixIcon: Icon(Icons.email_outlined),
@@ -68,15 +76,16 @@ class _BodyLogin extends State<BodyLogin> {
                         color: const Color.fromARGB(255, 104, 97, 97)),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const TextField(
-                    decoration: InputDecoration(
+                  child: TextField(
+                    controller: passwordController,
+                    decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'password',
                         prefixIcon: Icon(Icons.security_outlined)),
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
               //sign in button -----------------------------------------------------------
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 60.0),
@@ -90,6 +99,10 @@ class _BodyLogin extends State<BodyLogin> {
                         borderRadius: BorderRadius.circular(30)),
                     onPressed: () {
                       //after clicking on login button take to homepage
+                      context.read<AuthenticationService>().signIn(
+                            email: emailController.text,
+                            password: passwordController.text,
+                          );
                     },
                     child: const Text(
                       "Login",
@@ -102,7 +115,7 @@ class _BodyLogin extends State<BodyLogin> {
                 ),
               ),
               //not a memeber? register now
-              const SizedBox(height: 25.0),
+              const SizedBox(height: 20.0),
               GestureDetector(
                 onTap: () {
                   Navigator.push(

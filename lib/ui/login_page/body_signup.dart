@@ -100,6 +100,31 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
           ),
+          const SizedBox(height: 40),
+          //add Create Account button -----------------------------------
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 60.0),
+            child: SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: RawMaterialButton(
+                fillColor: Colors.cyan,
+                elevation: 4.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                onPressed: () {
+                  //after clicking on login button take to homepage
+                },
+                child: const Text(
+                  "Create Account",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
