@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:locate_it/ui/login_page/body_signup.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -19,11 +20,12 @@ class _BodyLogin extends State<BodyLogin> {
             children: [
               const SizedBox(height: 200),
               // Text
-              const Text(
+              Text(
                 'LocateIT',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 35,
+                style: GoogleFonts.breeSerif(
+                  fontSize: 44.0,
+                  textStyle:
+                      const TextStyle(color: Colors.white, letterSpacing: .5),
                 ),
               ),
               const SizedBox(height: 20),

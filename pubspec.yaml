@@ -38,6 +38,7 @@ dependencies:
   google_place: ^0.4.7
   flutter_dotenv: ^5.0.2
   http: ^0.13.4
+  google_fonts: ^3.0.1
 
 # Firebase auth and firebase core
 

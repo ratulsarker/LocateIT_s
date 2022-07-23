@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
@@ -11,18 +12,20 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.blueAccent,
       body: Column(
         children: [
           const SizedBox(height: 80),
-          const Text(
-            ' LocateIT Sign Up ',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 35,
+          Text(
+            'LocateIT SIGNUP',
+            style: GoogleFonts.breeSerif(
+              fontSize: 44.0,
+              textStyle:
+                  const TextStyle(color: Colors.white, letterSpacing: .5),
             ),
           ),
-          const SizedBox(height: 80),
+
+          const SizedBox(height: 60),
           // email sign up--------------------------------------------
           Padding(
             padding: const EdgeInsets.all(15.0),
