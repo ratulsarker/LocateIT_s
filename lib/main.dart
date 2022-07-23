@@ -7,9 +7,10 @@ import 'package:firebase_core/firebase_core.dart';
 // ignore: unused_import
 import 'ui/home_page/home_page.dart';
 import 'my_home_page.dart';
+import 'ui/login_page/body_signup.dart';
 
 Future main() async {
-  await dotenv.load(fileName: '.env');
+  // await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp();
 
@@ -27,13 +28,13 @@ class _LocateItState extends State<LocateIt> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: 'goHomePage',
-      routes: {
-        'goHomePage': (context) => const MyHomePage(),
-      },
+    return const MaterialApp(
+      // initialRoute: 'goHomePage',
+      // routes: {
+      //   'goHomePage': (context) => const SignupPage(),
+      // },
       title: 'LocateIT',
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }

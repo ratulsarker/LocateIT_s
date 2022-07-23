@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locate_it/ui/home_page/home_page.dart';
+import 'package:locate_it/ui/login_page/body_signup.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -105,7 +105,8 @@ class _BodyLogin extends State<BodyLogin> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: ((context) => const HomePage())),
+                    MaterialPageRoute(
+                        builder: ((context) => const SignupPage())),
                   );
                 },
                 child: const Text(
