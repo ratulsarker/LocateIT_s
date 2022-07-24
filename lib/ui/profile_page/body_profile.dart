@@ -11,9 +11,14 @@ class BodyProfile extends StatefulWidget {
 }
 
 class _BodyProfile extends State<BodyProfile> {
-  String name = "Justin Medeiros";
-  String username = "jmedeiros11";
-  String email = "mede4390@mylaurier.ca";
+  static String name = "Justin Medeiros";
+  static String username = "jmedeiros11";
+  static String email = "mede4390@mylaurier.ca";
+
+  String new_name = name;
+  String new_username = username;
+  String new_email = email;
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -61,13 +66,23 @@ class _BodyProfile extends State<BodyProfile> {
                       RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ))),
-              onPressed: () {},
+              onPressed: () {
+                name = new_name;
+                email = new_email;
+                username = new_username;
+                print(username);
+
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const HomePage())));
+              },
               child: const Text(
                 "Confirm Changes",
                 style: TextStyle(fontSize: 18, color: Colors.white),
               )),
         ),
-        SearchBar(310, name, 1), // Name field
+        SearchBar(310, new_name, 1), // Name field
         // Username Text
         Container(
             alignment: Alignment.topCenter,
@@ -76,7 +91,7 @@ class _BodyProfile extends State<BodyProfile> {
               "Username",
               style: TextStyle(color: Colors.white, fontSize: 20),
             )),
-        SearchBar(440, username, 0), // Username field
+        SearchBar(440, new_username, 0), // Username field
         // Email Text
         Container(
             alignment: Alignment.topCenter,
@@ -85,7 +100,7 @@ class _BodyProfile extends State<BodyProfile> {
               "Email",
               style: TextStyle(color: Colors.white, fontSize: 20),
             )),
-        SearchBar(550, email, 0), // Password field
+        SearchBar(550, new_email, 0), // Password field
         // Profile Icon
         Container(
           alignment: Alignment.topCenter,
@@ -116,7 +131,10 @@ class _BodyProfile extends State<BodyProfile> {
                 color: Colors.transparent,
               ),
               cursorColor: Colors.white,
-              onSubmitted: (value) => name = value));
+              onSubmitted: (value) {
+                name = value;
+                print(name);
+              }));
     } else {
       return Container(
           padding: EdgeInsets.only(top: paddingTop, right: 60, left: 60),
@@ -133,9 +151,17 @@ class _BodyProfile extends State<BodyProfile> {
                 borderRadius: BorderRadius.circular(20),
               ),
               cursorColor: Colors.white,
-              onSubmitted: (value) =>
-                  name = value) // Need to do this page route
+              onSubmitted: (value) {
+                name = value;
+                print(name);
+              }) // Need to do this page route
           );
     }
+  }
+
+  void confirm_changes(String name_c, String username_c, String email_c) {
+    name = name_c;
+    username = username_c;
+    email = email_c;
   }
 }

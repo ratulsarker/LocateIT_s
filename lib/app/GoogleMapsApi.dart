@@ -19,5 +19,7 @@ class GoogleMapsAPI {
     return placeID;
   }
 
+  Future getDetails() async {}
+
   //Future<Map<String, dynamic>> getPlace(String input) async {}
 }

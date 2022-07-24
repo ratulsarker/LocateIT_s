@@ -15,7 +15,7 @@ import 'my_home_page.dart';
 import 'ui/login_page/body_signup.dart';
 
 Future<void> main() async {
-  // await dotenv.load(fileName: '.env');
+  await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
