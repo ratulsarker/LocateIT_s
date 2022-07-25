@@ -47,7 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
     } else if (index == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: ((context) => const MyFavPage())),
+        MaterialPageRoute(
+            builder: ((context) => const MyFavPage(
+                  title: '',
+                  reviews: '',
+                  ratings: '',
+                  details: '',
+                  imagePath: '',
+                  hours: '',
+                ))),
       );
     }
     setState(() {

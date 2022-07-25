@@ -5,7 +5,7 @@ import '../../util/app_assets.dart';
 
 class MyFavPage extends StatefulWidget {
   final String title;
-  final Long hours;
+  final String hours;
   final String details;
   final String ratings;
   final String reviews;
