@@ -4,7 +4,7 @@ import 'package:locate_it/app/GoogleMapsApi.dart';
 import 'package:locate_it/ui/home_page/home_page.dart';
 import 'package:locate_it/ui/profile_page/profile_page.dart';
 import 'ui/login_page/login_page.dart';
-import 'favourites_page.dart';
+import 'ui/favourite_page/favourites_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -28,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
         //home: ProfilePage()
         home: HomePage()),
     MaterialApp(
-      //home: GooogleMapsAPI()
-    ),
+        //home: GooogleMapsAPI()
+        ),
     Text(
       'Notes',
       style: optionStyle,
