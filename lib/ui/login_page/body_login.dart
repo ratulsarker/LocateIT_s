@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../../authentication_service.dart';
+import '../../util/app_assets.dart';
 
 class BodyLogin extends StatefulWidget {
   const BodyLogin({Key? key}) : super(key: key);
@@ -25,22 +26,20 @@ class _BodyLogin extends State<BodyLogin> {
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 100),
+              const SizedBox(height: 60),
               // Text
-              Text(
-                'LocateIT',
-                style: GoogleFonts.breeSerif(
-                  fontSize: 44.0,
-                  textStyle:
-                      const TextStyle(color: Colors.white, letterSpacing: .5),
-                ),
+              const Image(
+                image: AssetImage(AppAssets.logo),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 0),
 
-              const Text(
+              Text(
                 'Welcome back, you\'ve been missed!',
-                style: TextStyle(
-                  fontSize: 18,
+                style: GoogleFonts.didactGothic(
+                  fontSize: 18.0,
+                  textStyle:
+                      const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+                  shadows: [const BoxShadow(offset: Offset(1,1), blurRadius: 10.0, color: Color.fromRGBO(0, 0, 0, 0.3), spreadRadius: 10)]
                 ),
               ),
 
@@ -50,42 +49,56 @@ class _BodyLogin extends State<BodyLogin> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+                    color: Colors.transparent,
                     border: Border.all(
-                        color: const Color.fromARGB(255, 104, 97, 97)),
-                    borderRadius: BorderRadius.circular(12),
+                        color: Colors.white, width: 3),
+                    borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
                     controller: emailController,
+                    style: GoogleFonts.didactGothic(
+                      fontSize: 16.0,
+                      textStyle:
+                      const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+                      shadows: [const BoxShadow(offset: Offset(1,1), blurRadius: 10.0, color: Color.fromRGBO(0, 0, 0, 0.3), spreadRadius: 10)]
+                ),
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Email',
-                      prefixIcon: Icon(Icons.email_outlined),
+                      hintStyle: TextStyle(color: Colors.white),
+                      prefixIcon: Icon(Icons.email_outlined, color: Colors.white),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               //password textbox for user to enter their password -------------------
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 255, 255, 255),
+                    color: Colors.transparent,
                     border: Border.all(
-                        color: const Color.fromARGB(255, 104, 97, 97)),
-                    borderRadius: BorderRadius.circular(12),
+                        color: Colors.white, width: 3),
+                    borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
                     controller: passwordController,
+                    style: GoogleFonts.didactGothic(
+                      fontSize: 16.0,
+                      textStyle:
+                      const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+                      shadows: [const BoxShadow(offset: Offset(1,1), blurRadius: 10.0, color: Color.fromRGBO(0, 0, 0, 0.3), spreadRadius: 10)]
+                ),
                     decoration: const InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'password',
-                        prefixIcon: Icon(Icons.security_outlined)),
+                        hintText: 'Password',
+                         hintStyle: TextStyle(color: Colors.white),
+                        prefixIcon: Icon(Icons.password, color: Colors.white)),
                   ),
                 ),
               ),
-              const SizedBox(height: 15),
+              const SizedBox(height: 20),
               //sign in button -----------------------------------------------------------
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 60.0),
@@ -93,7 +106,7 @@ class _BodyLogin extends State<BodyLogin> {
                   width: double.infinity,
                   height: 50,
                   child: RawMaterialButton(
-                    fillColor: Colors.cyan,
+                    fillColor: Colors.white,
                     elevation: 4.0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
@@ -104,18 +117,20 @@ class _BodyLogin extends State<BodyLogin> {
                             password: passwordController.text,
                           );
                     },
-                    child: const Text(
-                      "Login",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
-                      ),
+                    child: Text(
+                      "Log In",
+                      style: GoogleFonts.didactGothic(
+                      fontSize: 20.0,
+                      textStyle:
+                      const TextStyle(color: Color.fromRGBO(83, 146, 252, 1), letterSpacing: .5, fontWeight: FontWeight.bold),
+                      shadows: [const BoxShadow(offset: Offset(0,0), blurRadius: 5.0, color: Color.fromRGBO(0, 0, 0, 0.2), spreadRadius: 10)]
+                ),
                     ),
                   ),
                 ),
               ),
               //not a memeber? register now
-              const SizedBox(height: 20.0),
+              const SizedBox(height: 15.0),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -124,11 +139,14 @@ class _BodyLogin extends State<BodyLogin> {
                         builder: ((context) => const SignupPage())),
                   );
                 },
-                child: const Text(
-                  'Not a member? register now',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
+                child: Text(
+                  'Not a member? Register now',
+                  style: GoogleFonts.didactGothic(
+                      fontSize: 16.0,
+                      textStyle:
+                      const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+                      shadows: [const BoxShadow(offset: Offset(2.0,2.0), blurRadius: 10.0, color: Color.fromRGBO(0, 0, 0, 0.3), spreadRadius: 10)]
+                ),
                 ),
               ),
 
