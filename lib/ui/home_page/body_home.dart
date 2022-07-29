@@ -27,7 +27,7 @@ class _BodyHome extends State<BodyHome> {
     return Stack(children: <Widget>[
       // Profile Icon
       Container(
-        padding: const EdgeInsets.only(left: 360, top: 40),
+        padding: const EdgeInsets.only(left: 340, top: 40),
         child: IconButton(
           iconSize: 40,
           onPressed: () {
