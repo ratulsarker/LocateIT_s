@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:locate_it/ui/login_page/body_signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:locate_it/ui/signup_page/signup_page.dart';
 import 'package:provider/provider.dart';
 
 import '../../authentication_service.dart';
@@ -93,7 +93,7 @@ class _BodyLogin extends State<BodyLogin> {
                     decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Password',
-                         hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.white),
                         prefixIcon: Icon(Icons.password, color: Colors.white)),
                   ),
                 ),
@@ -136,7 +136,7 @@ class _BodyLogin extends State<BodyLogin> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: ((context) => const SignupPage())),
+                        builder: ((context) => const SignUpPage())),
                   );
                 },
                 child: Text(

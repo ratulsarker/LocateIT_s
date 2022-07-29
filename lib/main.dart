@@ -12,7 +12,6 @@ import 'package:firebase_core/firebase_core.dart';
 // ignore: unused_import
 import 'ui/home_page/home_page.dart';
 import 'my_home_page.dart';
-import 'ui/login_page/body_signup.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
