@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:locate_it/app/GoogleMapsApi.dart';
 import 'package:locate_it/app/search.dart';
+import 'package:locate_it/ui/details_page/details_page.dart';
 import '../profile_page/profile_page.dart';
+
+String locate = "";
 
 class BodyHome extends StatefulWidget {
   const BodyHome({Key? key}) : super(key: key);
@@ -27,7 +30,7 @@ class _BodyHome extends State<BodyHome> {
     return Stack(children: <Widget>[
       // Profile Icon
       Container(
-        padding: const EdgeInsets.only(left: 360, top: 40),
+        padding: const EdgeInsets.only(left: 340, top: 40),
         child: IconButton(
           iconSize: 40,
           onPressed: () {
@@ -80,7 +83,12 @@ class _BodyHome extends State<BodyHome> {
                   ),
                   onSubmitted: ((value) {
                     location =
-                        GoogleMapsAPI().getPlaceID(textEditingController.text);
+                        GoogleMapsAPI().getDetails(textEditingController.text);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: ((context) => DetailsPage(location)),
+                        ));
                   }));
             }),
           ],

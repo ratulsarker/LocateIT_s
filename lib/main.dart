@@ -12,13 +12,11 @@ import 'package:firebase_core/firebase_core.dart';
 // ignore: unused_import
 import 'ui/home_page/home_page.dart';
 import 'my_home_page.dart';
-import 'ui/login_page/body_signup.dart';
 
 Future<void> main() async {
-  // await dotenv.load(fileName: '.env');
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
   await Firebase.initializeApp();
-
   runApp(const LocateIt());
 }
 
