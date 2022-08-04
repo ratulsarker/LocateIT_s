@@ -27,7 +27,6 @@ class _BodyLogin extends State<BodyLogin> {
           child: Column(
             children: [
               const SizedBox(height: 60),
-              // Text
               const Image(
                 image: AssetImage(AppAssets.logo),
               ),

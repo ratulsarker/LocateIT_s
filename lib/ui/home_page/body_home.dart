@@ -83,7 +83,7 @@ class _BodyHome extends State<BodyHome> {
                   ),
                   onSubmitted: ((value) {
                     location =
-                        GoogleMapsAPI().getPlaceID(textEditingController.text);
+                        GoogleMapsAPI().getDetails(textEditingController.text);
                     Navigator.push(
                         context,
                         MaterialPageRoute(
