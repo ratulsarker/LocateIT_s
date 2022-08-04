@@ -28,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
         //home: ProfilePage()
         home: HomePage()),
     MaterialApp(
-      //home: GooogleMapsAPI()
-    ),
+        //home: GooogleMapsAPI()
+        ),
     Text(
       'Notes',
       style: optionStyle,
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (index == 3) {
       Navigator.push(context,
           MaterialPageRoute(builder: ((context) => const LoginPage())));
-    } else if (index == 2) {
+    } else if (index == 1) {
       Navigator.push(
         context,
         MaterialPageRoute(builder: ((context) => const MyFavPage())),
