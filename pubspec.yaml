@@ -42,6 +42,7 @@ dependencies:
   flutter_dotenv: ^5.0.2
   http: ^0.13.4
   google_fonts: ^3.0.1
+  dio: ^4.0.6
 
 # Firebase auth and firebase core
 

@@ -16,6 +16,7 @@ class BodyHome extends StatefulWidget {
 
 class _BodyHome extends State<BodyHome> {
   Search searchLocation = Search();
+  GoogleMapsAPI google_api = new GoogleMapsAPI();
   TextEditingController _searchController = TextEditingController();
   late var location;
 
@@ -28,6 +29,7 @@ class _BodyHome extends State<BodyHome> {
   @override
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
+      //GoogleMapsAPI().getImage(google_api.getPlaceID('Toronto')),
       // Profile Icon
       Container(
         padding: const EdgeInsets.only(left: 340, top: 40),
@@ -82,8 +84,10 @@ class _BodyHome extends State<BodyHome> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                   onSubmitted: ((value) {
+                    google_api
+                        .getImageReference(google_api.getPlaceID('Toronto'));
                     location =
-                        GoogleMapsAPI().getDetails(textEditingController.text);
+                        google_api.getDetails(textEditingController.text);
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -93,7 +97,6 @@ class _BodyHome extends State<BodyHome> {
             }),
           ],
         ),
-        // Need to do this page route
       ),
       // Text
       Container(
