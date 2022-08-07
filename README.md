@@ -25,6 +25,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## How to run the App
 - Install VS code and install Dart extension 
-- Run the command git clone https://github.com/ratulsarker/LocateIT_s.git to clone the repository 
+- Run the command " git clone https://github.com/ratulsarker/LocateIT_s.git " to clone the repository 
 - Install the andriod emulator(recommended emulator would be Pixel 5 API 31) to run the app 
 - Run the app by selecting the emulator as device and start debugging in main.dart file.
