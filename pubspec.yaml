@@ -43,6 +43,8 @@ dependencies:
   http: ^0.13.4
   google_fonts: ^3.0.1
   dio: ^4.0.6
+  cloud_firestore: ^3.4.3
+  collection_ext: ^1.0.0
 
 # Firebase auth and firebase core
 
