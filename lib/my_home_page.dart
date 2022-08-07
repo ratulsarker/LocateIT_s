@@ -55,6 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   details: '',
                   imagePath: '',
                   hours: '',
+                  price: '',
+                  rating: 0,
+                  subtitle: '',
                 ))),
       );
     }

@@ -1,6 +1,7 @@
 //import 'dart:ffi';
 import 'package:flutter/material.dart';
 import '../../util/app_assets.dart';
+import 'body.dart';
 
 class MyFavPage extends StatefulWidget {
   final String title;
@@ -18,6 +19,9 @@ class MyFavPage extends StatefulWidget {
     required this.ratings,
     required this.reviews,
     required this.imagePath,
+    required String subtitle,
+    required String price,
+    required double rating,
   }) : super(key: key);
 
   @override
@@ -27,8 +31,13 @@ class MyFavPage extends StatefulWidget {
 class _MyFavPageState extends State<MyFavPage> {
   @override
   Widget build(BuildContext context) {
-    return const Image(
-      image: AssetImage(AppAssets.testimage),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'My Favorites',
+        ),
+      ),
+      body: const Body(),
     );
   }
 }

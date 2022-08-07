@@ -6,6 +6,10 @@ class AppAssets {
   static const testimage = "assets/images/picture.jpg";
   static const background = "assets/images/background.png";
   static const logo = "assets/images/Logo.png";
+
+  static var whaleWhatching;
+
+  static var riffelseeHiking;
   // static const skydiving = "assets/images/skydiving.jpeg";
   // static const trekking = "assets/images/trekking.jpg";
   // static const hiking = "assets/images/hiking.jpg";
