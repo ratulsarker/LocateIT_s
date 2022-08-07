@@ -84,8 +84,8 @@ class _BodyHome extends State<BodyHome> {
                         borderRadius: BorderRadius.circular(20)),
                   ),
                   onSubmitted: ((value) {
-                    google_api
-                        .getImageReference(google_api.getPlaceID('Toronto'));
+                    //google_api
+                    //  .getImageReference(google_api.getPlaceID('Toronto'));
                     location =
                         google_api.getDetails(textEditingController.text);
                     Navigator.push(
